@@ -11,7 +11,7 @@ node {
     
     stage('Clone Repo') { // for display purposes
       // Get some code from a GitHub repository
-      git 'https://github.com/Uma0922/DevOps-CICD-Example.git'
+      git 'https://github.com/Uma0922/DevOps-Example.git'
       // Get the Maven tool.
       // ** NOTE: This 'maven-3.5.2' Maven tool must be configured
       // **       in the global configuration.           
@@ -25,7 +25,7 @@ node {
 		
     stage('Build Docker Image') {
       // build docker image
-      dockerImage = docker.build("DevOps-CICD-Example:${env.BUILD_NUMBER}")
+      dockerImage = docker.build("DevOps-Example:${env.BUILD_NUMBER}")
     }
    	  
     stage('Deploy Docker Image and login'){
