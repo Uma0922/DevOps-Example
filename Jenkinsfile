@@ -25,7 +25,7 @@ node {
 		
     stage('Build Docker Image') {
       // build docker image
-      dockerImage = docker.build("devOps-example:${env.BUILD_NUMBER}")
+      dockerImage = docker.build("devops-example:${env.BUILD_NUMBER}")
     }
    	  
     stage('Deploy Docker Image and login'){
